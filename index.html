@@ -8,7 +8,7 @@
     <style>
         /* Previous CSS remains the same until the Certificates section */
 
-        /* Certificates Section */
+        /* Certificates Section - ENHANCED */
         .certificates-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,6 +81,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             flex-grow: 1;
+            margin-bottom: 15px;
         }
 
         .certificate-topics {
@@ -98,6 +99,95 @@
             font-size: 0.8rem;
             margin-right: 8px;
             margin-bottom: 8px;
+        }
+
+        /* NEW: Certificate Images Styling */
+        .certificate-image-container {
+            margin: 15px 0;
+            text-align: center;
+            background: rgba(245, 241, 232, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(138, 154, 91, 0.2);
+        }
+
+        .certificate-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 10px;
+        }
+
+        .certificate-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .view-certificate-btn {
+            display: inline-block;
+            margin-top: 5px;
+            color: var(--muted-red);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .view-certificate-btn:hover {
+            color: var(--deep-red);
+            text-decoration: underline;
+        }
+
+        /* NEW: Modal for Certificate Viewing */
+        .certificate-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .certificate-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .certificate-modal-img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--light-matcha);
         }
 
         /* Keep all previous CSS styles from earlier versions */
@@ -605,6 +695,11 @@
             transition: var(--transition);
         }
 
+        .social-link:hover {
+            background: var(--matcha);
+            transform: translateY(-3px);
+        }
+
         footer {
             background: var(--dark);
             color: white;
@@ -627,6 +722,10 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--light-matcha);
         }
 
         .copyright {
@@ -759,9 +858,28 @@
                     </div>
                     
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn">Contact Me</a>
-                        <a href="#certificates" class="btn" style="background: var(--matcha);">View Certificates</a>
-                    </div>
+    <a href="#contact" class="btn">Contact Me</a>
+    <a href="#certificates" class="btn" style="background: var(--matcha);">View Certificates</a>
+</div>
+
+<!-- Add technical badges here -->
+<div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        <i class="fab fa-html5"></i> HTML5
+    </span>
+    <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        <i class="fab fa-css3-alt"></i> CSS3
+    </span>
+    <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        <i class="fab fa-js"></i> JavaScript
+    </span>
+    <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        <i class="fab fa-git-alt"></i> Git
+    </span>
+    <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+        <i class="fab fa-github"></i> GitHub
+    </span>
+</div>
                 </div>
                 
                 <div>
@@ -840,10 +958,10 @@
                             <span class="skill-category">Programming</span>
                             <span>Python, Java, C++</span>
                         </li>
-                        <li>
-                            <span class="skill-category">Web Development</span>
-                            <span>HTML, CSS, JavaScript</span>
-                        </li>
+<li>
+    <span class="skill-category">Web Development</span>
+    <span><strong>Portfolio Website</strong> (HTML/CSS/JS, GitHub Pages)</span>
+</li>
                         <li>
                             <span class="skill-category">Database</span>
                             <span>SQL, MongoDB Basics</span>
@@ -889,39 +1007,96 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-code"></i>
+   <!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Portfolio as a Project -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Personal Portfolio Website</h3>
+                <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+                <p>A fully responsive portfolio website built from scratch with custom design, smooth animations, and mobile-first approach.</p>
+                <div class="project-features" style="margin-top: 15px; text-align: left;">
+                    <p><strong>Features:</strong></p>
+                    <ul style="padding-left: 20px; color: #666; font-size: 0.9rem;">
+                        <li>Responsive design for all screen sizes</li>
+                        <li>Smooth scroll navigation with active states</li>
+                        <li>Mobile hamburger menu with transitions</li>
+                        <li>Custom color scheme and typography</li>
+                        <li>GitHub Pages deployment with CI/CD</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+                    <a href="https://github.com/reigniell/port" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                    <a href="https://reigniell.github.io/port" class="btn" style="padding: 8px 15px; font-size: 0.9rem; background: var(--matcha);">
+                        <i class="fas fa-external-link-alt"></i> Live Site
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Technical Implementation Details -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3>Technical Implementation</h3>
+                <p><strong>Portfolio Technical Stack:</strong></p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0;">
+                    <div style="text-align: center; padding: 10px; background: rgba(138, 154, 91, 0.1); border-radius: 8px;">
+                        <div style="font-size: 1.2rem; color: var(--muted-red); font-weight: bold;">500+</div>
+                        <div style="font-size: 0.8rem; color: #666;">Lines of Code</div>
                     </div>
-                    <h3>Software Project</h3>
-                    <p>Currently in development</p>
-                    <p style="color: #666; margin-top: 10px;">Check back soon for completed projects!</p>
+                    <div style="text-align: center; padding: 10px; background: rgba(138, 154, 91, 0.1); border-radius: 8px;">
+                        <div style="font-size: 1.2rem; color: var(--muted-red); font-weight: bold;">100%</div>
+                        <div style="font-size: 0.8rem; color: #666;">Custom CSS</div>
+                    </div>
                 </div>
                 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Web Application</h3>
-                    <p>Coming soon</p>
-                    <p style="color: #666; margin-top: 10px;">Will be added when completed</p>
+                <div style="margin-top: 15px;">
+                    <p><strong>Development Process:</strong></p>
+                    <ul style="padding-left: 20px; color: #666; font-size: 0.9rem;">
+                        <li>Mobile-first responsive design</li>
+                        <li>Cross-browser compatibility testing</li>
+                        <li>Git version control with descriptive commits</li>
+                        <li>GitHub Pages automated deployment</li>
+                        <li>Performance optimization</li>
+                    </ul>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-brain"></i>
+            </div>
+            
+            <!-- Future Project Placeholder -->
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI Project</h3>
+                <p>Intelligent Systems project</p>
+                <p style="color: #666; margin-top: 10px;">Currently planning - Part of CS Intelligent Systems major</p>
+                <div style="margin-top: 15px;">
+                    <p><strong>Planned Technologies:</strong></p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-top: 10px;">
+                        <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">
+                            Python
+                        </span>
+                        <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">
+                            TensorFlow
+                        </span>
+                        <span style="background: rgba(138, 154, 91, 0.1); color: var(--matcha); padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">
+                            Pandas
+                        </span>
                     </div>
-                    <h3>AI Project</h3>
-                    <p>Intelligent Systems project</p>
-                    <p style="color: #666; margin-top: 10px;">Part of CS Intelligent Systems major</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Work Experience -->
     <section id="experience" style="background: var(--light);">
@@ -1021,7 +1196,7 @@
         </div>
     </section>
 
-    <!-- Certificates & Awards Section -->
+    <!-- Certificates & Awards Section - ENHANCED WITH PHOTOS -->
     <section id="certificates" style="background: var(--light);">
         <div class="container">
             <div class="section-title-center">
@@ -1043,6 +1218,15 @@
                     <div class="certificate-details">
                         Participated in the CCS Robotics Competition for subject CSST 105, demonstrating skills in robotics programming and problem-solving.
                     </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/robotics-competition.jpg" alt="Robotics Competition Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/robotics-competition.jpg')">
+                        <a href="assets/certificates/robotics-competition.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Robotics</span>
                         <span class="topic-tag">Competition</span>
@@ -1051,97 +1235,163 @@
                 </div>
 
                 <!-- WorldwideLink Certificate -->
-             <!-- Interactive Dashboards using Excel -->
-<div class="certificate-card">
-    <div class="certificate-header">
-        <div class="certificate-icon">
-            <i class="fas fa-chart-line"></i>
-        </div>
-        <div>
-            <div class="certificate-title">Interactive Dashboards using Excel</div>
-            <div class="certificate-issuer">Webinar Certificate</div>
-            <div class="certificate-date">December 13, 2024</div>
-        </div>
-    </div>
-    <div class="certificate-details">
-        Certificate of Participation for attending the webinar on creating interactive dashboards and data visualizations using Microsoft Excel advanced features.
-    </div>
-    <div class="certificate-topics">
-        <span class="topic-tag">Microsoft Excel</span>
-        <span class="topic-tag">Dashboards</span>
-        <span class="topic-tag">Data Visualization</span>
-        <span class="topic-tag">Interactive Reports</span>
-    </div>
-</div>
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Employability Skills Training Program</div>
+                            <div class="certificate-issuer">WorldwideLink International</div>
+                            <div class="certificate-date">April 19-21, 2022</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Completed a three-day intensive training program focused on developing essential employability skills for the modern workplace.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/worldwidelink.jpg" alt="WorldwideLink Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/worldwidelink.jpg')">
+                        <a href="assets/certificates/worldwidelink.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Employability</span>
+                        <span class="topic-tag">Soft Skills</span>
+                        <span class="topic-tag">Professional Development</span>
+                    </div>
+                </div>
 
-<!-- Copilot in Microsoft Excel -->
-<div class="certificate-card">
-    <div class="certificate-header">
-        <div class="certificate-icon">
-            <i class="fas fa-robot"></i>
-        </div>
-        <div>
-            <div class="certificate-title">Copilot in Microsoft Excel</div>
-            <div class="certificate-issuer">Webinar Certificate</div>
-            <div class="certificate-date">December 13, 2024</div>
-        </div>
-    </div>
-    <div class="certificate-details">
-        Certificate of Participation for attending the webinar on using Microsoft Copilot AI assistant within Excel for data analysis, formula generation, and automation.
-    </div>
-    <div class="certificate-topics">
-        <span class="topic-tag">Microsoft Excel</span>
-        <span class="topic-tag">Copilot AI</span>
-        <span class="topic-tag">AI Assistant</span>
-        <span class="topic-tag">Automation</span>
-    </div>
-</div>
+                <!-- Interactive Dashboards using Excel -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Interactive Dashboards using Excel</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 13, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on creating interactive dashboards and data visualizations using Microsoft Excel advanced features.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/excel-dashboards.jpg" alt="Excel Dashboards Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/excel-dashboards.jpg')">
+                        <a href="assets/certificates/excel-dashboards.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Microsoft Excel</span>
+                        <span class="topic-tag">Dashboards</span>
+                        <span class="topic-tag">Data Visualization</span>
+                        <span class="topic-tag">Interactive Reports</span>
+                    </div>
+                </div>
 
-<!-- The Basics of Power BI -->
-<div class="certificate-card">
-    <div class="certificate-header">
-        <div class="certificate-icon">
-            <i class="fas fa-chart-bar"></i>
-        </div>
-        <div>
-            <div class="certificate-title">The Basics of Power BI</div>
-            <div class="certificate-issuer">Webinar Certificate</div>
-            <div class="certificate-date">December 13, 2024</div>
-        </div>
-    </div>
-    <div class="certificate-details">
-        Certificate of Participation for attending the webinar on Microsoft Power BI fundamentals including data connection, transformation, visualization, and dashboard creation.
-    </div>
-    <div class="certificate-topics">
-        <span class="topic-tag">Power BI</span>
-        <span class="topic-tag">Business Intelligence</span>
-        <span class="topic-tag">Data Analytics</span>
-        <span class="topic-tag">Data Visualization</span>
-    </div>
-</div>
+                <!-- Copilot in Microsoft Excel -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Copilot in Microsoft Excel</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 13, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on using Microsoft Copilot AI assistant within Excel for data analysis, formula generation, and automation.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/copilot-excel.jpg" alt="Copilot Excel Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/copilot-excel.jpg')">
+                        <a href="assets/certificates/copilot-excel.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Microsoft Excel</span>
+                        <span class="topic-tag">Copilot AI</span>
+                        <span class="topic-tag">AI Assistant</span>
+                        <span class="topic-tag">Automation</span>
+                    </div>
+                </div>
 
-<!-- Microsoft 365 Copilot for Everyone -->
-<div class="certificate-card">
-    <div class="certificate-header">
-        <div class="certificate-icon">
-            <i class="fas fa-users-cog"></i>
-        </div>
-        <div>
-            <div class="certificate-title">Microsoft 365 Copilot for Everyone</div>
-            <div class="certificate-issuer">Webinar Certificate</div>
-            <div class="certificate-date">December 13, 2024</div>
-        </div>
-    </div>
-    <div class="certificate-details">
-        Certificate of Participation for attending the webinar on implementing Microsoft 365 Copilot across organization for enhanced productivity, collaboration, and AI-powered workflows.
-    </div>
-    <div class="certificate-topics">
-        <span class="topic-tag">Microsoft 365</span>
-        <span class="topic-tag">Copilot AI</span>
-        <span class="topic-tag">Productivity</span>
-        <span class="topic-tag">Enterprise AI</span>
-    </div>
-</div>
+                <!-- The Basics of Power BI -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">The Basics of Power BI</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 13, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on Microsoft Power BI fundamentals including data connection, transformation, visualization, and dashboard creation.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/power-bi.jpg" alt="Power BI Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/power-bi.jpg')">
+                        <a href="assets/certificates/power-bi.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Power BI</span>
+                        <span class="topic-tag">Business Intelligence</span>
+                        <span class="topic-tag">Data Analytics</span>
+                        <span class="topic-tag">Data Visualization</span>
+                    </div>
+                </div>
+
+                <!-- Microsoft 365 Copilot for Everyone -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Microsoft 365 Copilot for Everyone</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 13, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on implementing Microsoft 365 Copilot across organization for enhanced productivity, collaboration, and AI-powered workflows.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/microsoft-copilot.jpg" alt="Microsoft Copilot Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/microsoft-copilot.jpg')">
+                        <a href="assets/certificates/microsoft-copilot.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Microsoft 365</span>
+                        <span class="topic-tag">Copilot AI</span>
+                        <span class="topic-tag">Productivity</span>
+                        <span class="topic-tag">Enterprise AI</span>
+                    </div>
+                </div>
 
                 <!-- Email Etiquette Webinar -->
                 <div class="certificate-card">
@@ -1158,6 +1408,15 @@
                     <div class="certificate-details">
                         Certificate of Participation for attending the webinar on professional email communication strategies and etiquette for workplace success.
                     </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/email-etiquette.jpg" alt="Email Etiquette Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/email-etiquette.jpg')">
+                        <a href="assets/certificates/email-etiquette.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Email Etiquette</span>
                         <span class="topic-tag">Professional Communication</span>
@@ -1180,6 +1439,15 @@
                     <div class="certificate-details">
                         Certificate of Participation for attending the webinar on the application of Artificial Intelligence tools in modern cybersecurity practices and threat detection.
                     </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/ai-cybersecurity.jpg" alt="AI Cyber Security Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/ai-cybersecurity.jpg')">
+                        <a href="assets/certificates/ai-cybersecurity.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Cyber Security</span>
                         <span class="topic-tag">Artificial Intelligence</span>
@@ -1188,6 +1456,37 @@
                     </div>
                 </div>
 
+                <!-- Saylor Word Processing -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Word Processing Achievement</div>
+                            <div class="certificate-issuer">Saylor.org</div>
+                            <div class="certificate-date">November 27, 2020</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Successfully completed PRDV003: Word Processing course, demonstrating proficiency in advanced word processing techniques and document formatting.
+                    </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/saylor-word.jpg" alt="Saylor Word Processing Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/saylor-word.jpg')">
+                        <a href="assets/certificates/saylor-word.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Word Processing</span>
+                        <span class="topic-tag">Microsoft Word</span>
+                        <span class="topic-tag">Document Formatting</span>
+                    </div>
+                </div>
+                
                 <!-- Saylor Spreadsheets -->
                 <div class="certificate-card">
                     <div class="certificate-header">
@@ -1203,6 +1502,15 @@
                     <div class="certificate-details">
                         Successfully completed PRDV004: Spreadsheets course, demonstrating advanced skills in spreadsheet management, formulas, and data analysis.
                     </div>
+                    
+                    <!-- Certificate Photo Section -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/saylor-spreadsheets.jpg" alt="Saylor Spreadsheets Certificate" class="certificate-image" onclick="openCertificateModal('assets/certificates/saylor-spreadsheets.jpg')">
+                        <a href="assets/certificates/saylor-spreadsheets.jpg" target="_blank" class="view-certificate-btn">
+                            <i class="fas fa-external-link-alt"></i> View Full Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Spreadsheets</span>
                         <span class="topic-tag">Excel</span>
@@ -1254,21 +1562,27 @@
                         </div>
                     </div>
                     
-                    <div style="margin-top: 30px;">
-                        <h4>Connect with me</h4>
-                        <div class="social-links">
-                            <a href="www.linkedin.com/in/bayani-reigniell-ann-5a5b59395" target="_blank" class="social-link">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://github.com/reigniell" target="_blank" class="social-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:reigniellannbayani@gmail.com" class="social-link">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                   <div style="margin-top: 30px;">
+    <h4>Connect with me</h4>
+    <div class="social-links">
+        <a href="www.linkedin.com/in/bayani-reigniell-ann-5a5b59395" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/reigniell" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:reigniellannbayani@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+    
+    <!-- GitHub Profile Button - ENHANCED -->
+    <div style="margin-top: 20px;">
+        <a href="https://github.com/reigniell" target="_blank" class="btn" style="background: var(--matcha); padding: 10px 20px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
+            <i class="fab fa-github"></i> View My GitHub Profile
+        </a>
+    </div>
+</div>
                 
                 <div>
                     <h3 style="margin-bottom: 20px;">Available for Internship</h3>
@@ -1301,13 +1615,32 @@
                     <a href="#contact">Contact</a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 Reigniell Ann L. Bayani. Portfolio for OJT/Internship Applications.</p>
-            </div>
+          <!-- Add open-source note -->
+<div style="text-align: center; margin: 20px 0;">
+    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 10px;">
+        This portfolio is an open-source project built from scratch
+    </p>
+    <a href="https://github.com/reigniell/port" style="color: var(--light-matcha); text-decoration: none; font-weight: 600;">
+        <i class="fab fa-github"></i> View Source Code on GitHub
+    </a>
+</div>
+
+<div class="copyright">
+    <p>&copy; 2024 Reigniell Ann L. Bayani. Portfolio for OJT/Internship Applications.</p>
+</div>
         </div>
     </footer>
 
+    <!-- NEW: Certificate Modal -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="certificate-modal-content">
+            <button class="close-modal" onclick="closeCertificateModal()">&times;</button>
+            <img id="modalCertificateImage" class="certificate-modal-img" alt="Certificate">
+        </div>
+    </div>
+
     <script>
+        // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         
@@ -1318,6 +1651,49 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+            });
+        });
+        
+        // NEW: Certificate Modal Functions
+        function openCertificateModal(imageSrc) {
+            document.getElementById('modalCertificateImage').src = imageSrc;
+            document.getElementById('certificateModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+        
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target.id === 'certificateModal') {
+                closeCertificateModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeCertificateModal();
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
