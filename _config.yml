@@ -2,16 +2,4 @@ title: Reigniell Bayani
 logo: /assets/headshot_circle.png
 description: Data Scientist
 show_downloads: false
-theme: null
-
-# Custom CSS to fix text colors
-markdown: kramdown
-highlighter: rouge
-sass:
-  style: :compressed
-include:
-  - _includes
-
-# Add custom CSS
-stylesheets:
-  - style.css
+theme: jekyll-theme-minimal
