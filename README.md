@@ -1,4 +1,4 @@
-![Reigniell Bayani](/asset/headshot_circle.png)
+![Reigniell Bayani](assets/headshot_circle.png)
 
 # Reigniell Bayani
 **Data Scientist**
