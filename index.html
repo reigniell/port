@@ -3,10 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reigniell Ann L. Bayani | CS Student Portfolio</title>
+    <title>Reigniell Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Rich Muted Red & Matcha Green Theme */
+        /* Previous CSS remains the same until the Certificates section */
+
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .certificate-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--matcha);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(92, 64, 64, 0.15);
+        }
+
+        .certificate-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(138, 154, 91, 0.2);
+        }
+
+        .certificate-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(160, 82, 82, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-red);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .certificate-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .certificate-issuer {
+            color: var(--muted-red);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .certificate-date {
+            color: var(--matcha);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .certificate-details {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .certificate-topics {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: rgba(138, 154, 91, 0.1);
+            color: var(--matcha);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Keep all previous CSS styles from earlier versions */
         :root {
             --muted-red: #A05252;
             --deep-red: #8B3A3A;
@@ -150,7 +244,6 @@
             color: var(--dark);
         }
 
-        /* Hero Section */
         .hero {
             padding-top: 140px;
             background: linear-gradient(135deg, var(--cream) 0%, #f0ebe0 100%);
@@ -220,15 +313,95 @@
             box-shadow: var(--shadow);
         }
 
-        /* Skills Grid */
-        .skills-grid, .certifications-grid {
+        .objective-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--matcha);
+        }
+
+        .education-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--matcha);
+        }
+
+        .education-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .education-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--muted-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 30px;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        .education-content {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--matcha);
+        }
+
+        .education-year {
+            color: var(--muted-red);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .education-school {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .honors-badge {
+            display: inline-block;
+            background: var(--matcha);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .skills-card, .cert-card {
+        .skills-card {
             background: white;
             padding: 30px;
             border-radius: 12px;
@@ -236,11 +409,7 @@
             border-top: 4px solid var(--muted-red);
         }
 
-        .cert-card {
-            border-top: 4px solid var(--matcha);
-        }
-
-        .skills-card h3, .cert-card h3 {
+        .skills-card h3 {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -249,11 +418,11 @@
             font-size: 1.3rem;
         }
 
-        .skills-card h3 i, .cert-card h3 i {
+        .skills-card h3 i {
             color: var(--matcha);
         }
 
-        .skills-list, .cert-list {
+        .skills-list {
             list-style: none;
         }
 
@@ -265,23 +434,8 @@
             align-items: center;
         }
 
-        .cert-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .cert-list li:last-child {
+        .skills-list li:last-child {
             border-bottom: none;
-        }
-
-        .cert-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--matcha);
-            font-weight: bold;
         }
 
         .skill-category {
@@ -290,28 +444,6 @@
             min-width: 150px;
         }
 
-        .cert-title {
-            font-weight: 600;
-            color: var(--dark);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .cert-details {
-            color: #666;
-            font-size: 0.95rem;
-            display: block;
-        }
-
-        .cert-date {
-            color: var(--muted-red);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 5px;
-            display: block;
-        }
-
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -342,7 +474,6 @@
             margin: 0 auto 20px;
         }
 
-        /* Experience */
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -420,7 +551,6 @@
             left: 0;
         }
 
-        /* Contact */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -475,7 +605,6 @@
             transition: var(--transition);
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
@@ -508,7 +637,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 992px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -548,6 +676,10 @@
             .nav-links.active {
                 left: 0;
             }
+            
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -563,6 +695,16 @@
                 flex-direction: column;
                 gap: 30px;
                 text-align: center;
+            }
+            
+            .certificate-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .certificate-icon {
+                margin: 0 auto;
             }
         }
     </style>
@@ -582,10 +724,10 @@
                     <a href="#home">Home</a>
                     <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
-                    <a href="#certifications">Certifications</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
                     <a href="#seminars">Seminars</a>
+                    <a href="#certificates">Certificates</a>
                     <a href="#contact">Contact</a>
                 </div>
             </nav>
@@ -618,7 +760,7 @@
                     
                     <div class="hero-buttons">
                         <a href="#contact" class="btn">Contact Me</a>
-                        <a href="#certifications" class="btn" style="background: var(--matcha);">View Certifications</a>
+                        <a href="#certificates" class="btn" style="background: var(--matcha);">View Certificates</a>
                     </div>
                 </div>
                 
@@ -635,7 +777,7 @@
             <div class="section-title-center">
                 <h2>Career Objective</h2>
             </div>
-            <div class="skills-card">
+            <div class="objective-content">
                 <p>As a 4th year BS Computer Science student, I aim to contribute as a Student Assistant in attending to clerical and technical functions, aiding academic activities, and assisting in ensuring the smooth running of the office. I look forward to gaining hands-on experience that will enhance my capabilities and better equip me for future career opportunities in the technology industry.</p>
             </div>
         </div>
@@ -665,6 +807,7 @@
                         <div class="education-year">2020 – 2022</div>
                         <div class="education-school">Laguna State Polytechnic University Sta Cruz Campus</div>
                         <p>Senior High School: Information and Communication Technology</p>
+                        <span class="honors-badge">With Honors</span>
                     </div>
                 </div>
                 
@@ -676,6 +819,7 @@
                         <div class="education-year">2016 – 2020</div>
                         <div class="education-school">Liceo De Pila</div>
                         <p>Junior High School</p>
+                        <span class="honors-badge">Best in Conduct</span>
                     </div>
                 </div>
             </div>
@@ -744,67 +888,8 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <div class="section-title-center">
-                <h2>Certifications & Achievements</h2>
-            </div>
-            <div class="certifications-grid">
-                <!-- Professional Certificates -->
-                <div class="cert-card">
-                    <h3><i class="fas fa-certificate"></i> Professional Certificates</h3>
-                    <ul class="cert-list">
-                        <li>
-                            <span class="cert-title">WorldWideLink International - Employability Skills Training Program</span>
-                            <span class="cert-details">Three-day training program (EST/ESTP)</span>
-                            <span class="cert-date">April 19-21, 2022</span>
-                        </li>
-                        <li>
-                            <span class="cert-title">Saylor Academy - PRDV003: Word Processing</span>
-                            <span class="cert-details">Achievement certificate for word processing skills</span>
-                            <span class="cert-date">November 27, 2020</span>
-                        </li>
-                        <li>
-                            <span class="cert-title">Saylor Academy - PRDV004: Spreadsheets</span>
-                            <span class="cert-details">Achievement certificate for spreadsheet skills</span>
-                            <span class="cert-date">January 19, 2021</span>
-                        </li>
-                        <li>
-                            <span class="cert-title">CCS Robotics Competition Participation</span>
-                            <span class="cert-details">Achievement recognition for participating in robotics competition</span>
-                            <span class="cert-date">July 30, 2025</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Webinar Certificates -->
-                <div class="cert-card">
-                    <h3><i class="fas fa-award"></i> Webinar Certificates</h3>
-                    <ul class="cert-list">
-                        <li>
-                            <span class="cert-title">Microsoft Excel & Power BI Webinar Series</span>
-                            <span class="cert-details">Interactive Dashboards using Excel, Copilot in Microsoft Excel, The Basics of Power BI, Microsoft 365 Copilot for Everyone</span>
-                            <span class="cert-date">December 13, 2024</span>
-                        </li>
-                        <li>
-                            <span class="cert-title">Mastering Email Etiquette for Success</span>
-                            <span class="cert-details">Professional email communication webinar</span>
-                            <span class="cert-date">December 12, 2024</span>
-                        </li>
-                        <li>
-                            <span class="cert-title">Usage of AI Tools in Cyber Security</span>
-                            <span class="cert-details">AI applications in cybersecurity webinar</span>
-                            <span class="cert-date">December 10, 2024</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Projects Section -->
-    <section id="projects" style="background: var(--light);">
+    <section id="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -839,7 +924,7 @@
     </section>
 
     <!-- Work Experience -->
-    <section id="experience">
+    <section id="experience" style="background: var(--light);">
         <div class="container">
             <h2>Work Experience</h2>
             <div class="experience-grid">
@@ -900,8 +985,8 @@
         </div>
     </section>
 
-    <!-- Seminars -->
-    <section id="seminars" style="background: var(--light);">
+    <!-- Seminars Section -->
+    <section id="seminars">
         <div class="container">
             <h2>Seminars & Trainings Attended</h2>
             <div class="skills-grid">
@@ -936,7 +1021,178 @@
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Certificates & Awards Section -->
+    <section id="certificates" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Certificates & Awards</h2>
+            </div>
+            <div class="certificates-grid">
+                <!-- Robotics Competition -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">CCS Robotics Competition</div>
+                            <div class="certificate-issuer">Achievement Recognition</div>
+                            <div class="certificate-date">July 30, 2025</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Participated in the CCS Robotics Competition for subject CSST 105, demonstrating skills in robotics programming and problem-solving.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Robotics</span>
+                        <span class="topic-tag">Competition</span>
+                        <span class="topic-tag">CSST 105</span>
+                    </div>
+                </div>
+
+                <!-- WorldwideLink Certificate -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Employability Skills Training Program</div>
+                            <div class="certificate-issuer">WorldwideLink International</div>
+                            <div class="certificate-date">April 19-21, 2022</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Completed a three-day intensive training program focused on developing essential employability skills for the modern workplace.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Employability</span>
+                        <span class="topic-tag">Soft Skills</span>
+                        <span class="topic-tag">Professional Development</span>
+                    </div>
+                </div>
+
+                <!-- Saylor.org Certificates -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Word Processing Achievement</div>
+                            <div class="certificate-issuer">Saylor.org</div>
+                            <div class="certificate-date">November 27, 2020</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Successfully completed PRDV003: Word Processing course, demonstrating proficiency in advanced word processing techniques and document formatting.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Word Processing</span>
+                        <span class="topic-tag">Microsoft Word</span>
+                        <span class="topic-tag">Document Formatting</span>
+                    </div>
+                </div>
+
+                <!-- Microsoft Webinars (December 2024) -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Microsoft Excel & Power BI Webinars</div>
+                            <div class="certificate-issuer">Webinar Series</div>
+                            <div class="certificate-date">December 13, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Completed comprehensive webinars covering:
+                        • Interactive Dashboards using Excel
+                        • Copilot in Microsoft Excel
+                        • The Basics of Power BI
+                        • Microsoft 365 Copilot for Everyone
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Excel</span>
+                        <span class="topic-tag">Power BI</span>
+                        <span class="topic-tag">Data Analytics</span>
+                        <span class="topic-tag">AI Tools</span>
+                    </div>
+                </div>
+
+                <!-- Email Etiquette Webinar -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Mastering Email Etiquette for Success</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 12, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on professional email communication strategies and etiquette for workplace success.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Email Etiquette</span>
+                        <span class="topic-tag">Professional Communication</span>
+                        <span class="topic-tag">Workplace Skills</span>
+                    </div>
+                </div>
+
+                <!-- AI in Cyber Security -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Usage of AI Tools in Cyber Security</div>
+                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-date">December 10, 2024</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Certificate of Participation for attending the webinar on the application of Artificial Intelligence tools in modern cybersecurity practices and threat detection.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Cyber Security</span>
+                        <span class="topic-tag">Artificial Intelligence</span>
+                        <span class="topic-tag">AI Tools</span>
+                        <span class="topic-tag">Threat Detection</span>
+                    </div>
+                </div>
+
+                <!-- Saylor Spreadsheets -->
+                <div class="certificate-card">
+                    <div class="certificate-header">
+                        <div class="certificate-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <div>
+                            <div class="certificate-title">Spreadsheets Achievement</div>
+                            <div class="certificate-issuer">Saylor.org</div>
+                            <div class="certificate-date">January 19, 2021</div>
+                        </div>
+                    </div>
+                    <div class="certificate-details">
+                        Successfully completed PRDV004: Spreadsheets course, demonstrating advanced skills in spreadsheet management, formulas, and data analysis.
+                    </div>
+                    <div class="certificate-topics">
+                        <span class="topic-tag">Spreadsheets</span>
+                        <span class="topic-tag">Excel</span>
+                        <span class="topic-tag">Data Analysis</span>
+                        <span class="topic-tag">Formulas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="section-title-center">
@@ -1011,14 +1267,15 @@
             <div class="footer-content">
                 <div>
                     <h3 style="color: white; margin-bottom: 10px;">Reigniell Ann L. Bayani</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8);">BS Computer Science Student | Certified Professional</p>
+                    <p style="color: rgba(255, 255, 255, 0.8);">BS Computer Science Student</p>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#certifications">Certifications</a>
+                    <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
+                    <a href="#certificates">Certificates</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
