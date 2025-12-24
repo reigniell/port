@@ -8,18 +8,17 @@
     <style>
         /* Rich Muted Red & Matcha Green Theme */
         :root {
-            --muted-red: #A05252;     /* Rich muted red */
-            --deep-red: #8B3A3A;       /* Darker red */
-            --matcha: #8A9A5B;         /* Matcha green */
-            --light-matcha: #B8C99D;   /* Light matcha */
-            --cream: #F5F1E8;          /* Cream background */
-            --dark: #3C3636;           /* Dark brown/gray */
-            --light: #FAF7F2;          /* Light cream */
+            --muted-red: #A05252;
+            --deep-red: #8B3A3A;
+            --matcha: #8A9A5B;
+            --light-matcha: #B8C99D;
+            --cream: #F5F1E8;
+            --dark: #3C3636;
+            --light: #FAF7F2;
             --shadow: 0 5px 20px rgba(92, 64, 64, 0.1);
             --transition: all 0.3s ease;
         }
 
-        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -100,18 +99,6 @@
             box-shadow: 0 8px 20px rgba(160, 82, 82, 0.2);
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--muted-red);
-            color: var(--muted-red);
-        }
-
-        .btn-outline:hover {
-            background: var(--muted-red);
-            color: white;
-        }
-
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -137,10 +124,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .logo i {
-            color: var(--matcha);
         }
 
         .nav-links {
@@ -174,19 +157,6 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(138, 154, 91, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
         }
 
         .hero-content {
@@ -194,8 +164,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
-            position: relative;
-            z-index: 1;
         }
 
         .hero-text h1 {
@@ -243,11 +211,6 @@
             margin-top: 20px;
         }
 
-        .profile-img-container {
-            display: flex;
-            justify-content: center;
-        }
-
         .profile-img {
             width: 320px;
             height: 320px;
@@ -257,11 +220,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* About/Objective Section */
-        .objective {
-            background: var(--light);
-        }
-
+        /* Objective Section */
         .objective-content {
             max-width: 800px;
             margin: 0 auto;
@@ -270,12 +229,6 @@
             border-radius: 15px;
             box-shadow: var(--shadow);
             border-left: 5px solid var(--matcha);
-        }
-
-        .objective-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #666;
         }
 
         /* Education */
@@ -337,12 +290,6 @@
             font-weight: 700;
             color: var(--dark);
             margin-bottom: 8px;
-        }
-
-        .education-details {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
         }
 
         .honors-badge {
@@ -407,7 +354,7 @@
             min-width: 150px;
         }
 
-        /* Projects Section */
+        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -425,11 +372,6 @@
             text-align: center;
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(92, 64, 64, 0.1);
-        }
-
         .project-icon {
             width: 70px;
             height: 70px;
@@ -443,16 +385,7 @@
             margin: 0 auto 20px;
         }
 
-        .project-placeholder {
-            background: rgba(138, 154, 91, 0.05);
-            border: 2px dashed var(--light-matcha);
-            border-radius: 10px;
-            padding: 40px 20px;
-            text-align: center;
-            color: var(--gray);
-        }
-
-        /* Experience & Seminars */
+        /* Experience */
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -466,11 +399,6 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border-top: 3px solid var(--matcha);
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(92, 64, 64, 0.1);
         }
 
         .experience-header {
@@ -490,7 +418,6 @@
             justify-content: center;
             color: var(--muted-red);
             font-size: 1.2rem;
-            flex-shrink: 0;
         }
 
         .experience-title {
@@ -537,10 +464,6 @@
         }
 
         /* Contact */
-        .contact-section {
-            background: linear-gradient(135deg, var(--light) 0%, #f0ebe0 100%);
-        }
-
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -564,10 +487,6 @@
             border-bottom: 1px solid #eee;
         }
 
-        .contact-item-large:last-child {
-            border-bottom: none;
-        }
-
         .contact-icon-large {
             width: 50px;
             height: 50px;
@@ -578,7 +497,6 @@
             justify-content: center;
             color: var(--muted-red);
             font-size: 1.2rem;
-            flex-shrink: 0;
         }
 
         .social-links {
@@ -600,11 +518,6 @@
             transition: var(--transition);
         }
 
-        .social-link:hover {
-            background: var(--matcha);
-            transform: translateY(-3px);
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -619,13 +532,6 @@
             margin-bottom: 40px;
         }
 
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-        }
-
         .footer-links {
             display: flex;
             gap: 30px;
@@ -635,11 +541,6 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: var(--transition);
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--light-matcha);
         }
 
         .copyright {
@@ -655,7 +556,6 @@
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 40px;
             }
             
             .hero-text h1 {
@@ -664,10 +564,6 @@
             
             .hero-text .subtitle {
                 font-size: 1.5rem;
-            }
-            
-            .contact-info {
-                align-items: center;
             }
             
             .profile-img {
@@ -690,7 +586,6 @@
                 align-items: center;
                 padding-top: 50px;
                 transition: var(--transition);
-                gap: 25px;
             }
             
             .nav-links.active {
@@ -707,26 +602,10 @@
                 padding: 60px 0;
             }
             
-            .education-timeline::before {
-                left: 25px;
-            }
-            
-            .education-icon {
-                width: 50px;
-                height: 50px;
-                margin-right: 20px;
-                font-size: 1rem;
-            }
-            
             .footer-content {
                 flex-direction: column;
                 gap: 30px;
                 text-align: center;
-            }
-            
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
             }
         }
     </style>
@@ -781,11 +660,11 @@
                     
                     <div class="hero-buttons">
                         <a href="#contact" class="btn">Contact Me</a>
-                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#projects" class="btn" style="background: var(--matcha);">View Projects</a>
                     </div>
                 </div>
                 
-                <div class="profile-img-container">
+                <div>
                     <img src="assets/headshot_circle.png" alt="Reigniell Ann L. Bayani" class="profile-img">
                 </div>
             </div>
@@ -793,7 +672,7 @@
     </section>
 
     <!-- Objective Section -->
-    <section id="objective" class="objective">
+    <section id="objective" style="background: var(--light);">
         <div class="container">
             <div class="section-title-center">
                 <h2>Career Objective</h2>
@@ -809,7 +688,6 @@
         <div class="container">
             <h2>Education</h2>
             <div class="education-timeline">
-                <!-- Current Education -->
                 <div class="education-item">
                     <div class="education-icon">
                         <i class="fas fa-university"></i>
@@ -817,14 +695,10 @@
                     <div class="education-content">
                         <div class="education-year">2022 – Present</div>
                         <div class="education-school">Laguna State Polytechnic University Sta Cruz Campus</div>
-                        <div class="education-details">
-                            <p>BS Computer Science major in Intelligent Systems</p>
-                            <!-- Honors badge REMOVED as requested -->
-                        </div>
+                        <p>BS Computer Science major in Intelligent Systems</p>
                     </div>
                 </div>
                 
-                <!-- Senior High -->
                 <div class="education-item">
                     <div class="education-icon">
                         <i class="fas fa-graduation-cap"></i>
@@ -832,14 +706,11 @@
                     <div class="education-content">
                         <div class="education-year">2020 – 2022</div>
                         <div class="education-school">Laguna State Polytechnic University Sta Cruz Campus</div>
-                        <div class="education-details">
-                            <p>Senior High School: Information and Communication Technology</p>
-                            <span class="honors-badge">With Honors</span>
-                        </div>
+                        <p>Senior High School: Information and Communication Technology</p>
+                        <span class="honors-badge">With Honors</span>
                     </div>
                 </div>
                 
-                <!-- Junior High -->
                 <div class="education-item">
                     <div class="education-icon">
                         <i class="fas fa-school"></i>
@@ -847,10 +718,8 @@
                     <div class="education-content">
                         <div class="education-year">2016 – 2020</div>
                         <div class="education-school">Liceo De Pila</div>
-                        <div class="education-details">
-                            <p>Junior High School</p>
-                            <span class="honors-badge">Best in Conduct</span>
-                        </div>
+                        <p>Junior High School</p>
+                        <span class="honors-badge">Best in Conduct</span>
                     </div>
                 </div>
             </div>
@@ -864,60 +733,54 @@
                 <h2>Skills & Competencies</h2>
             </div>
             <div class="skills-grid">
-                <!-- Technical Skills -->
                 <div class="skills-card">
                     <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
                     <ul class="skills-list">
                         <li>
-                            <span class="skill-category">Programming Languages</span>
-                            <span><strong>Python</strong> (Proficient), <strong>Java</strong> (Intermediate), <strong>C++</strong> (Intermediate)</span>
+                            <span class="skill-category">Programming</span>
+                            <span>Python, Java, C++</span>
                         </li>
                         <li>
                             <span class="skill-category">Web Development</span>
-                            <span>HTML5, CSS3, JavaScript (ES6+), <strong>Responsive Design</strong></span>
+                            <span>HTML, CSS, JavaScript</span>
                         </li>
                         <li>
-                            <span class="skill-category">Database & Data</span>
-                            <span>SQL (MySQL), MongoDB Basics, <strong>Data Structures & Algorithms</strong></span>
+                            <span class="skill-category">Database</span>
+                            <span>SQL, MongoDB Basics</span>
                         </li>
                         <li>
-                            <span class="skill-category">Development Tools</span>
-                            <span>Git/GitHub, VS Code, IntelliJ IDEA, <strong>Windows/Linux OS</strong></span>
+                            <span class="skill-category">Tools</span>
+                            <span>Git, VS Code, MS Office</span>
                         </li>
                         <li>
-                            <span class="skill-category">CS Fundamentals</span>
-                            <span>OOP, Software Engineering Principles, <strong>System Design Basics</strong></span>
-                        </li>
-                        <li>
-                            <span class="skill-category">Specialized Knowledge</span>
-                            <span>AI/ML Concepts, <strong>Intelligent Systems</strong> (Major)</span>
+                            <span class="skill-category">Intelligent Systems</span>
+                            <span>AI/ML Fundamentals</span>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Personal Skills -->
                 <div class="skills-card">
-                    <h3><i class="fas fa-user-check"></i> Personal & Professional Skills</h3>
+                    <h3><i class="fas fa-user-check"></i> Personal Skills</h3>
                     <ul class="skills-list">
                         <li>
                             <span class="skill-category">Communication</span>
-                            <span><strong>Technical Documentation</strong>, Presentation Skills, Team Collaboration</span>
+                            <span>Excellent verbal & written</span>
                         </li>
                         <li>
-                            <span class="skill-category">Analytical Skills</span>
-                            <span><strong>Problem-Solving</strong>, Logical Thinking, Debugging & Troubleshooting</span>
+                            <span class="skill-category">Problem Solving</span>
+                            <span>Analytical & critical thinking</span>
                         </li>
                         <li>
-                            <span class="skill-category">Project Management</span>
-                            <span>Task Prioritization, Deadline Management, <strong>Agile Awareness</strong></span>
+                            <span class="skill-category">Teamwork</span>
+                            <span>Collaborative & supportive</span>
                         </li>
                         <li>
-                            <span class="skill-category">Learning Ability</span>
-                            <span><strong>Quick Adaptation</strong> to New Technologies, Continuous Learning</span>
+                            <span class="skill-category">Time Management</span>
+                            <span>Organized & deadline-oriented</span>
                         </li>
                         <li>
-                            <span class="skill-category">Additional Competencies</span>
-                            <span>Attention to Detail, Quality Focus, <strong>Customer Service Experience</strong></span>
+                            <span class="skill-category">Adaptability</span>
+                            <span>Quick learner & flexible</span>
                         </li>
                     </ul>
                 </div>
@@ -925,58 +788,37 @@
         </div>
     </section>
 
-    <!-- Projects Section (Placeholder) -->
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 - Placeholder -->
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Coming Soon</h3>
-                    <p>Software Development Project</p>
-                    <div class="project-placeholder">
-                        <i class="fas fa-tools" style="font-size: 2rem; color: var(--matcha); margin-bottom: 15px;"></i>
-                        <p>Project under development</p>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">Check back soon for completed projects!</p>
-                    </div>
+                    <h3>Software Project</h3>
+                    <p>Currently in development</p>
+                    <p style="color: #666; margin-top: 10px;">Check back soon for completed projects!</p>
                 </div>
                 
-                <!-- Project 2 - Placeholder -->
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Coming Soon</h3>
-                    <p>Web Application</p>
-                    <div class="project-placeholder">
-                        <i class="fas fa-hourglass-half" style="font-size: 2rem; color: var(--matcha); margin-bottom: 15px;"></i>
-                        <p>Currently in development phase</p>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">Will be added when completed</p>
-                    </div>
+                    <h3>Web Application</h3>
+                    <p>Coming soon</p>
+                    <p style="color: #666; margin-top: 10px;">Will be added when completed</p>
                 </div>
                 
-                <!-- Project 3 - Placeholder -->
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Coming Soon</h3>
-                    <p>Intelligent Systems Project</p>
-                    <div class="project-placeholder">
-                        <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--matcha); margin-bottom: 15px;"></i>
-                        <p>AI/ML project in planning stage</p>
-                        <p style="font-size: 0.9rem; margin-top: 10px;">Part of CS Intelligent Systems major</p>
-                    </div>
+                    <h3>AI Project</h3>
+                    <p>Intelligent Systems project</p>
+                    <p style="color: #666; margin-top: 10px;">Part of CS Intelligent Systems major</p>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="color: var(--gray); font-style: italic;">
-                    <i class="fas fa-info-circle" style="color: var(--matcha);"></i> 
-                    Currently working on academic and personal projects. Will update this section with completed work soon.
-                </p>
             </div>
         </div>
     </section>
@@ -986,7 +828,6 @@
         <div class="container">
             <h2>Work Experience</h2>
             <div class="experience-grid">
-                <!-- Crafter -->
                 <div class="experience-card">
                     <div class="experience-header">
                         <div class="experience-icon">
@@ -1005,7 +846,6 @@
                     </ul>
                 </div>
                 
-                <!-- Make Up Artist -->
                 <div class="experience-card">
                     <div class="experience-header">
                         <div class="experience-icon">
@@ -1024,7 +864,6 @@
                     </ul>
                 </div>
                 
-                <!-- Pastry Assistant -->
                 <div class="experience-card">
                     <div class="experience-header">
                         <div class="experience-icon">
@@ -1051,7 +890,6 @@
         <div class="container">
             <h2>Seminars & Trainings Attended</h2>
             <div class="skills-grid">
-                <!-- Recent Seminars -->
                 <div class="skills-card">
                     <h3><i class="fas fa-calendar-alt"></i> 2024</h3>
                     <ul class="skills-list">
@@ -1059,7 +897,6 @@
                     </ul>
                 </div>
                 
-                <!-- 2023 Seminars -->
                 <div class="skills-card">
                     <h3><i class="fas fa-calendar-alt"></i> 2023</h3>
                     <ul class="skills-list">
@@ -1067,7 +904,6 @@
                     </ul>
                 </div>
                 
-                <!-- 2022 Seminars -->
                 <div class="skills-card">
                     <h3><i class="fas fa-calendar-alt"></i> 2022</h3>
                     <ul class="skills-list">
@@ -1086,7 +922,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact-section">
+    <section id="contact" style="background: var(--light);">
         <div class="container">
             <div class="section-title-center">
                 <h2>Get In Touch</h2>
@@ -1144,10 +980,10 @@
                 <div>
                     <h3 style="margin-bottom: 20px;">Available for Internship</h3>
                     <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px; line-height: 1.8;">
-                        I am currently seeking internship opportunities (On-the-Job Training) where I can apply my Computer Science knowledge, learn from industry professionals, and contribute to meaningful projects. I'm particularly interested in roles involving software development, data analysis, or intelligent systems.
+                        I am currently seeking internship opportunities (On-the-Job Training) where I can apply my Computer Science knowledge, learn from industry professionals, and contribute to meaningful projects.
                     </p>
-                    <a href="mailto:reigniellannbayani@gmail.com?subject=Internship%20Opportunity&body=Dear%20Reigniell," class="btn" style="padding: 14px 35px; font-size: 1.05rem;">
-                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    <a href="mailto:reigniellannbayani@gmail.com" class="btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
                     </a>
                 </div>
             </div>
@@ -1158,27 +994,26 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-logo">Reigniell Ann L. Bayani</a>
+                <div>
+                    <h3 style="color: white; margin-bottom: 10px;">Reigniell Ann L. Bayani</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">BS Computer Science Student</p>
+                </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
-                    <a href="#seminars">Seminars</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Reigniell Ann L. Bayani. BS Computer Science Student Portfolio.</p>
-                <p style="margin-top: 10px; font-size: 0.85rem;">Laguna State Polytechnic University | Seeking OJT/Internship Opportunities</p>
+                <p>&copy; 2024 Reigniell Ann L. Bayani. Portfolio for OJT/Internship Applications.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         
@@ -1186,27 +1021,9 @@
             navLinks.classList.toggle('active');
         });
         
-        // Close menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-            });
-        });
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
             });
         });
     </script>
