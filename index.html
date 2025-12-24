@@ -903,6 +903,60 @@
             font-size: 0.9rem;
         }
 
+        /* Certificate Image Styling */
+        .certificate-image-container {
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(138, 154, 91, 0.1);
+            transition: var(--transition);
+        }
+
+        .certificate-image-container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .certificate-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .certificate-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .certificate-images-grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .grid-image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(138, 154, 91, 0.1);
+            transition: var(--transition);
+        }
+
+        .grid-image-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .grid-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
             .container {
@@ -968,6 +1022,11 @@
             
             section {
                 padding: 80px 0;
+            }
+
+            .certificate-images-grid,
+            .certificate-images-grid-4 {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1488,6 +1547,12 @@
                             <div class="certificate-date">July 30, 2025</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Image -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/robotics.jpg" alt="Robotics Competition Certificate">
+                    </div>
+                    
                     <div class="certificate-details">
                         Participated in robotics competition demonstrating problem-solving and programming skills for subject CSST 105.
                     </div>
@@ -1498,41 +1563,53 @@
                     </div>
                 </div>
 
-                <!-- Microsoft Webinars -->
+                <!-- Microsoft Excel Dashboard -->
                 <div class="certificate-card fade-in delay-3">
                     <div class="certificate-header">
                         <div class="certificate-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div>
-                            <div class="certificate-title">Microsoft Productivity Suite</div>
-                            <div class="certificate-issuer">Microsoft Webinar Series</div>
+                            <div class="certificate-title">Interactive Dashboards using Excel</div>
+                            <div class="certificate-issuer">Microsoft Webinar</div>
                             <div class="certificate-date">December 13, 2024</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Image -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/interactive-dashboards-using-excel.jpg" alt="Excel Dashboard Certificate">
+                    </div>
+                    
                     <div class="certificate-details">
-                        Completed comprehensive training on Excel dashboards, Power BI fundamentals, and Microsoft 365 Copilot integration.
+                        Learned to create interactive dashboards and data visualizations using advanced Excel features.
                     </div>
                     <div class="certificate-topics">
                         <span class="topic-tag">Excel</span>
-                        <span class="topic-tag">Power BI</span>
-                        <span class="topic-tag">AI Tools</span>
                         <span class="topic-tag">Data Analytics</span>
+                        <span class="topic-tag">Dashboards</span>
+                        <span class="topic-tag">Data Visualization</span>
                     </div>
                 </div>
 
-                <!-- Cyber Security -->
+                <!-- AI in Cyber Security -->
                 <div class="certificate-card fade-in delay-4">
                     <div class="certificate-header">
                         <div class="certificate-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
-                            <div class="certificate-title">AI in Cyber Security</div>
+                            <div class="certificate-title">Usage of AI Tools in Cyber Security</div>
                             <div class="certificate-issuer">Webinar Certificate</div>
                             <div class="certificate-date">December 10, 2024</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Image -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/usage-of-ai-tools-in-cyber-security.jpg" alt="AI in Cyber Security Certificate">
+                    </div>
+                    
                     <div class="certificate-details">
                         Training on application of Artificial Intelligence tools in modern cybersecurity practices and threat detection.
                     </div>
@@ -1540,6 +1617,7 @@
                         <span class="topic-tag">Cyber Security</span>
                         <span class="topic-tag">Artificial Intelligence</span>
                         <span class="topic-tag">Threat Detection</span>
+                        <span class="topic-tag">AI Tools</span>
                     </div>
                 </div>
 
@@ -1550,11 +1628,17 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <div class="certificate-title">Professional Email Communication</div>
-                            <div class="certificate-issuer">Webinar Certificate</div>
+                            <div class="certificate-title">Mastering Email Etiquette for Success</div>
+                            <div class="certificate-issuer">Professional Development</div>
                             <div class="certificate-date">December 12, 2024</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Image -->
+                    <div class="certificate-image-container">
+                        <img src="assets/certificates/mastering-email-etiquette-for-success.jpg" alt="Email Etiquette Certificate">
+                    </div>
+                    
                     <div class="certificate-details">
                         Mastering professional email strategies and workplace communication etiquette for career success.
                     </div>
@@ -1562,10 +1646,11 @@
                         <span class="topic-tag">Communication</span>
                         <span class="topic-tag">Professionalism</span>
                         <span class="topic-tag">Workplace Skills</span>
+                        <span class="topic-tag">Email Etiquette</span>
                     </div>
                 </div>
 
-                <!-- Saylor Certificates -->
+                <!-- Microsoft Office Suite -->
                 <div class="certificate-card fade-in delay-3">
                     <div class="certificate-header">
                         <div class="certificate-icon">
@@ -1577,6 +1662,17 @@
                             <div class="certificate-date">2020-2021</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Images in a grid -->
+                    <div class="certificate-images-grid">
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/word.jpg" alt="Word Processing Certificate">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/spreadsheet.jpg" alt="Spreadsheet Certificate">
+                        </div>
+                    </div>
+                    
                     <div class="certificate-details">
                         Achieved certifications in Word Processing and Spreadsheets demonstrating advanced office software proficiency.
                     </div>
@@ -1588,7 +1684,7 @@
                     </div>
                 </div>
 
-                <!-- LSPU Seminars -->
+                <!-- Professional Development Series -->
                 <div class="certificate-card fade-in delay-4">
                     <div class="certificate-header">
                         <div class="certificate-icon">
@@ -1600,6 +1696,23 @@
                             <div class="certificate-date">2022-2024</div>
                         </div>
                     </div>
+                    
+                    <!-- Certificate Images Grid -->
+                    <div class="certificate-images-grid-4">
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/cybersecu.jpg" alt="Cyber Security Certificate">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/iot.jpg" alt="IoT Certificate">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/career-op.jpg" alt="Career Opportunities Certificate">
+                        </div>
+                        <div class="grid-image-container">
+                            <img src="assets/certificates/stress-management.jpg" alt="Stress Management Certificate">
+                        </div>
+                    </div>
+                    
                     <div class="certificate-details">
                         Comprehensive training covering cyber security, IoT, stress management, career opportunities, and employability skills.
                     </div>
@@ -1608,6 +1721,7 @@
                         <span class="topic-tag">IoT</span>
                         <span class="topic-tag">Career Development</span>
                         <span class="topic-tag">Soft Skills</span>
+                        <span class="topic-tag">Stress Management</span>
                     </div>
                 </div>
             </div>
