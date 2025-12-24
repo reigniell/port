@@ -3,298 +3,667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reigniell Bayani - Data Scientist</title>
+    <title>Reigniell Bayani | Data Science Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Merlot-inspired color scheme */
+        /* Modern Color Palette */
         :root {
-            --merlot-red: #8b0000;
-            --merlot-dark: #5a0000;
-            --merlot-light: #f9f5f0;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --section-bg: #ffffff;
-            --shadow: 0 4px 12px rgba(139, 0, 0, 0.08);
+            --primary: #8b0000;      /* Merlot Red */
+            --primary-dark: #5a0000;
+            --secondary: #2c3e50;    /* Dark Blue */
+            --accent: #3498db;       /* Light Blue */
+            --light: #f9f5f0;
+            --dark: #333333;
+            --gray: #95a5a6;
+            --white: #ffffff;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
 
-        /* Base styles */
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             line-height: 1.7;
-            color: var(--text-dark);
-            background-color: var(--merlot-light);
-            padding: 20px;
-            max-width: 1000px;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-        }
-
-        /* Header & Profile */
-        .profile-header {
-            text-align: center;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
-            border-top: 5px solid var(--merlot-red);
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--merlot-red);
-            box-shadow: 0 0 20px rgba(139, 0, 0, 0.2);
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: var(--merlot-dark);
-            font-size: 2.8em;
-            margin-bottom: 10px;
-        }
-
-        .tagline {
-            font-size: 1.3em;
-            color: var(--merlot-red);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .skills {
-            color: var(--text-light);
-            font-style: italic;
-            margin-bottom: 25px;
             padding: 0 20px;
         }
 
-        /* Contact links */
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            background-color: var(--merlot-red);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            background-color: var(--merlot-dark);
-            transform: translateY(-3px);
-        }
-
-        /* Content sections */
         section {
-            background: var(--section-bg);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
         }
 
         h2 {
-            color: var(--merlot-red);
-            font-size: 1.8em;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--merlot-red);
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--secondary);
+            position: relative;
         }
 
-        h3 {
-            color: var(--merlot-dark);
-            margin: 20px 0 10px;
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
         }
 
-        ul {
-            padding-left: 25px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: var(--text-dark);
-        }
-
-        /* Project cards */
-        .project {
-            background: #fcfafa;
-            border-left: 4px solid var(--merlot-red);
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .project h3 {
-            margin-top: 0;
-        }
-
-        .project-links a {
+        .btn {
             display: inline-block;
-            margin-right: 15px;
-            color: var(--merlot-red);
+            padding: 14px 32px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
             font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
             text-decoration: none;
         }
 
-        .project-links a:hover {
-            text-decoration: underline;
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            background: linear-gradient(135deg, var(--light) 0%, #f0ebe4 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .hero-text .highlight {
+            color: var(--primary);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 8px solid var(--white);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .project-image {
-            max-width: 100%;
-            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 10px;
             margin: 15px 0;
-            border: 1px solid #eee;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(139, 0, 0, 0.1);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #ecf0f1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(139, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
         }
 
         /* Footer */
         footer {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
             text-align: center;
-            padding: 30px;
-            color: var(--text-light);
-            font-size: 0.95em;
-            border-top: 1px solid #eee;
-            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             
-            .profile-header {
-                padding: 30px 15px;
+            .hero-text h1 {
+                font-size: 2.8rem;
             }
             
-            h1 {
-                font-size: 2.2em;
+            .menu-toggle {
+                display: block;
             }
             
-            section {
-                padding: 20px;
-            }
-            
-            .contact-links {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
                 flex-direction: column;
                 align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
             }
             
-            .contact-links a {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
+            .nav-links.active {
+                left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.3rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header with profile -->
-    <header class="profile-header">
-        <img src="assets/headshot_circle.png" alt="Reigniell Bayani" class="profile-img">
-        <h1>Reigniell Bayani</h1>
-        <p class="tagline">Data Scientist</p>
-        <p class="skills">Technical Skills: Python, SQL, AWS, Snowflake, MATLAB</p>
-        
-        <div class="contact-links">
-            <a href="https://github.com/reigniell" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/reigniell" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Reigniell</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <ul>
-            <li><strong>Ph.D., Physics</strong> | The University of Texas at Dallas (May 2022)</li>
-            <li><strong>M.S., Physics</strong> | The University of Texas at Dallas (December 2019)</li>
-            <li><strong>B.S., Physics</strong> | The University of Texas at Dallas (May 2017)</li>
-        </ul>
-    </section>
-
-    <!-- Work Experience -->
-    <section id="experience">
-        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-        
-        <div class="project">
-            <h3>Data Scientist @ Toyota Financial Services (June 2022 - Present)</h3>
-            <ul>
-                <li>Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts</li>
-                <li>Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses</li>
-            </ul>
-        </div>
-        
-        <div class="project">
-            <h3>Data Science Consultant @ Shawhin Talebi Ventures LLC (December 2020 - Present)</h3>
-            <ul>
-                <li>Conducted data collection, processing, and analysis for novel study evaluating the impact of over 300 biometrics variables on human performance in hyper-realistic, live-fire training scenarios</li>
-                <li>Applied unsupervised deep learning approaches to longitudinal ICU data to discover novel sepsis sub-phenotypes</li>
-            </ul>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transforming Data into <span class="highlight">Actionable Insights</span></h1>
+                    <p>I'm Reigniell Bayani, a Data Scientist specializing in machine learning, predictive analytics, and transforming complex data into strategic business solutions.</p>
+                    <div style="display: flex; gap: 20px; margin-top: 40px;">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/headshot_circle.png" alt="Reigniell Bayani" class="profile-img">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2><i class="fas fa-code"></i> Projects</h2>
-        
-        <div class="project">
-            <h3>Data-Driven EEG Band Discovery with Decision Trees</h3>
-            <div class="project-links">
-                <a href="https://www.mdpi.com/1424-8220/22/8/3048" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Publication
-                </a>
+    <!-- Projects Section -->
+    <section id="projects" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="assets/eeg_band_discovery.jpeg" alt="EEG Band Discovery" class="project-image">
+                    <div class="project-content">
+                        <h3>Data-Driven EEG Band Discovery</h3>
+                        <p>Developed objective strategy for discovering optimal EEG bands using decision trees and Python.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Signal Processing</span>
+                        </div>
+                        <a href="https://www.mdpi.com/1424-8220/22/8/3048" target="_blank" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">
+                            <i class="fas fa-external-link-alt"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="assets/bike_study.jpeg" alt="Particulate Matter Study" class="project-image">
+                    <div class="project-content">
+                        <h3>Particulate Matter Impact Analysis</h3>
+                        <p>Used Matlab to train 100+ ML models estimating PM concentrations from biometric variables.</p>
+                        <div class="project-tags">
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Biometrics</span>
+                            <span class="tag">Environmental Science</span>
+                        </div>
+                        <a href="https://www.mdpi.com/1424-8220/22/11/4240" target="_blank" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">
+                            <i class="fas fa-external-link-alt"></i> View Publication
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p>Developed objective strategy for discovering optimal EEG bands based on signal power spectra using <strong>Python</strong>. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two.</p>
-            <img src="assets/eeg_band_discovery.jpeg" alt="EEG Band Discovery" class="project-image">
         </div>
-        
-        <div class="project">
-            <h3>Decoding Physical and Cognitive Impacts of Particulate Matter Concentrations at Ultra-Fine Scales</h3>
-            <div class="project-links">
-                <a href="https://www.mdpi.com/1424-8220/22/11/4240" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Publication
-                </a>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SQL</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MATLAB</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>AWS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Snowflake</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git & GitHub</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Used <strong>Matlab</strong> to train over 100 machine learning models which estimated particulate matter concentrations based on a suite of over 300 biometric variables. We found biometric variables can be used to accurately estimate particulate matter concentrations at ultra-fine spatial scales with high fidelity (r² = 0.91).</p>
-            <img src="assets/bike_study.jpeg" alt="Bike Study" class="project-image">
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Professional Journey</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3><i class="fas fa-car"></i> Toyota Financial Services</h3>
+                        <p style="color: var(--primary); font-weight: 600; margin: 10px 0;">Data Scientist | June 2022 - Present</p>
+                        <ul style="margin-top: 15px;">
+                            <li>Uncovered and corrected missing step in production data pipeline impacting 70% of active accounts</li>
+                            <li>Redeveloped loan originations model with 50% performance improvement</li>
+                            <li>Saved $1M+ in potential losses through model optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3><i class="fas fa-chart-line"></i> Shawhin Talebi Ventures</h3>
+                        <p style="color: var(--primary); font-weight: 600; margin: 10px 0;">Data Science Consultant | Dec 2020 - Present</p>
+                        <ul style="margin-top: 15px;">
+                            <li>Analyzed 300+ biometric variables in hyper-realistic training scenarios</li>
+                            <li>Applied unsupervised deep learning to ICU data for sepsis sub-phenotype discovery</li>
+                            <li>Led data collection and processing for novel human performance studies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>reigniell@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/reigniell</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/reigniell</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--gray);">
+                        Interested in collaborating or have a data science challenge? I'd love to hear about it.
+                    </p>
+                    <a href="mailto:reigniell@example.com" class="btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Reigniell Bayani | Data Science Portfolio</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">
-            <a href="https://github.com/reigniell/port" style="color: var(--merlot-red);">View source on GitHub</a>
-        </p>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="color: var(--white); margin-bottom: 10px;">Reigniell Bayani</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Data Scientist | Physicist | Machine Learning Specialist</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Reigniell Bayani. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Simple script for smooth scrolling -->
+    <!-- JavaScript -->
     <script>
-        // Smooth scrolling for anchor links
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
@@ -302,7 +671,7 @@
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 20,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
