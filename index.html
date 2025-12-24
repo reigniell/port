@@ -220,98 +220,15 @@
             box-shadow: var(--shadow);
         }
 
-        /* Objective Section */
-        .objective-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--matcha);
-        }
-
-        /* Education */
-        .education-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .education-timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--matcha);
-        }
-
-        .education-item {
-            display: flex;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .education-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--muted-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            margin-right: 30px;
-            flex-shrink: 0;
-            z-index: 1;
-        }
-
-        .education-content {
-            flex: 1;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--matcha);
-        }
-
-        .education-year {
-            color: var(--muted-red);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .education-school {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .honors-badge {
-            display: inline-block;
-            background: var(--matcha);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
         /* Skills Grid */
-        .skills-grid {
+        .skills-grid, .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .skills-card {
+        .skills-card, .cert-card {
             background: white;
             padding: 30px;
             border-radius: 12px;
@@ -319,7 +236,11 @@
             border-top: 4px solid var(--muted-red);
         }
 
-        .skills-card h3 {
+        .cert-card {
+            border-top: 4px solid var(--matcha);
+        }
+
+        .skills-card h3, .cert-card h3 {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -328,11 +249,11 @@
             font-size: 1.3rem;
         }
 
-        .skills-card h3 i {
+        .skills-card h3 i, .cert-card h3 i {
             color: var(--matcha);
         }
 
-        .skills-list {
+        .skills-list, .cert-list {
             list-style: none;
         }
 
@@ -344,14 +265,50 @@
             align-items: center;
         }
 
-        .skills-list li:last-child {
+        .cert-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .cert-list li:last-child {
             border-bottom: none;
+        }
+
+        .cert-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--matcha);
+            font-weight: bold;
         }
 
         .skill-category {
             font-weight: 600;
             color: var(--dark);
             min-width: 150px;
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: var(--dark);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .cert-details {
+            color: #666;
+            font-size: 0.95rem;
+            display: block;
+        }
+
+        .cert-date {
+            color: var(--muted-red);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
         }
 
         /* Projects */
@@ -625,6 +582,7 @@
                     <a href="#home">Home</a>
                     <a href="#education">Education</a>
                     <a href="#skills">Skills</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
                     <a href="#seminars">Seminars</a>
@@ -660,7 +618,7 @@
                     
                     <div class="hero-buttons">
                         <a href="#contact" class="btn">Contact Me</a>
-                        <a href="#projects" class="btn" style="background: var(--matcha);">View Projects</a>
+                        <a href="#certifications" class="btn" style="background: var(--matcha);">View Certifications</a>
                     </div>
                 </div>
                 
@@ -677,7 +635,7 @@
             <div class="section-title-center">
                 <h2>Career Objective</h2>
             </div>
-            <div class="objective-content">
+            <div class="skills-card">
                 <p>As a 4th year BS Computer Science student, I aim to contribute as a Student Assistant in attending to clerical and technical functions, aiding academic activities, and assisting in ensuring the smooth running of the office. I look forward to gaining hands-on experience that will enhance my capabilities and better equip me for future career opportunities in the technology industry.</p>
             </div>
         </div>
@@ -707,7 +665,6 @@
                         <div class="education-year">2020 – 2022</div>
                         <div class="education-school">Laguna State Polytechnic University Sta Cruz Campus</div>
                         <p>Senior High School: Information and Communication Technology</p>
-                        <span class="honors-badge">With Honors</span>
                     </div>
                 </div>
                 
@@ -719,7 +676,6 @@
                         <div class="education-year">2016 – 2020</div>
                         <div class="education-school">Liceo De Pila</div>
                         <p>Junior High School</p>
-                        <span class="honors-badge">Best in Conduct</span>
                     </div>
                 </div>
             </div>
@@ -788,8 +744,67 @@
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title-center">
+                <h2>Certifications & Achievements</h2>
+            </div>
+            <div class="certifications-grid">
+                <!-- Professional Certificates -->
+                <div class="cert-card">
+                    <h3><i class="fas fa-certificate"></i> Professional Certificates</h3>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-title">WorldWideLink International - Employability Skills Training Program</span>
+                            <span class="cert-details">Three-day training program (EST/ESTP)</span>
+                            <span class="cert-date">April 19-21, 2022</span>
+                        </li>
+                        <li>
+                            <span class="cert-title">Saylor Academy - PRDV003: Word Processing</span>
+                            <span class="cert-details">Achievement certificate for word processing skills</span>
+                            <span class="cert-date">November 27, 2020</span>
+                        </li>
+                        <li>
+                            <span class="cert-title">Saylor Academy - PRDV004: Spreadsheets</span>
+                            <span class="cert-details">Achievement certificate for spreadsheet skills</span>
+                            <span class="cert-date">January 19, 2021</span>
+                        </li>
+                        <li>
+                            <span class="cert-title">CCS Robotics Competition Participation</span>
+                            <span class="cert-details">Achievement recognition for participating in robotics competition</span>
+                            <span class="cert-date">July 30, 2025</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Webinar Certificates -->
+                <div class="cert-card">
+                    <h3><i class="fas fa-award"></i> Webinar Certificates</h3>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-title">Microsoft Excel & Power BI Webinar Series</span>
+                            <span class="cert-details">Interactive Dashboards using Excel, Copilot in Microsoft Excel, The Basics of Power BI, Microsoft 365 Copilot for Everyone</span>
+                            <span class="cert-date">December 13, 2024</span>
+                        </li>
+                        <li>
+                            <span class="cert-title">Mastering Email Etiquette for Success</span>
+                            <span class="cert-details">Professional email communication webinar</span>
+                            <span class="cert-date">December 12, 2024</span>
+                        </li>
+                        <li>
+                            <span class="cert-title">Usage of AI Tools in Cyber Security</span>
+                            <span class="cert-details">AI applications in cybersecurity webinar</span>
+                            <span class="cert-date">December 10, 2024</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" style="background: var(--light);">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -824,7 +839,7 @@
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" style="background: var(--light);">
+    <section id="experience">
         <div class="container">
             <h2>Work Experience</h2>
             <div class="experience-grid">
@@ -886,7 +901,7 @@
     </section>
 
     <!-- Seminars -->
-    <section id="seminars">
+    <section id="seminars" style="background: var(--light);">
         <div class="container">
             <h2>Seminars & Trainings Attended</h2>
             <div class="skills-grid">
@@ -922,7 +937,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" style="background: var(--light);">
+    <section id="contact">
         <div class="container">
             <div class="section-title-center">
                 <h2>Get In Touch</h2>
@@ -996,11 +1011,11 @@
             <div class="footer-content">
                 <div>
                     <h3 style="color: white; margin-bottom: 10px;">Reigniell Ann L. Bayani</h3>
-                    <p style="color: rgba(255, 255, 255, 0.8);">BS Computer Science Student</p>
+                    <p style="color: rgba(255, 255, 255, 0.8);">BS Computer Science Student | Certified Professional</p>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
-                    <a href="#education">Education</a>
+                    <a href="#certifications">Certifications</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#experience">Experience</a>
