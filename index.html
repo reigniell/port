@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reigniell Ann L. Bayani | Computer Science Portfolio</title>
+    <title>Reigniell Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Enhanced Professional Theme */
@@ -753,6 +753,90 @@
             background: linear-gradient(135deg, rgba(138, 154, 91, 0.2), rgba(160, 82, 82, 0.2));
         }
 
+        /* Certificate Image Styling */
+        .certificate-image-container {
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(138, 154, 91, 0.1);
+            transition: var(--transition);
+        }
+
+        .certificate-image-container:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .certificate-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .certificate-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .certificate-images-grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .grid-image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(138, 154, 91, 0.1);
+            transition: var(--transition);
+        }
+
+        .grid-image-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .grid-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* PDF Button Styling */
+        .pdf-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #d9534f, #c9302c);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(217, 83, 79, 0.2);
+        }
+
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(217, 83, 79, 0.3);
+            background: linear-gradient(135deg, #c9302c, #d9534f);
+        }
+
+        .pdf-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
         /* Contact Section */
         .contact-section {
             background: linear-gradient(135deg, var(--light) 0%, #f0ebe0 100%);
@@ -903,60 +987,6 @@
             font-size: 0.9rem;
         }
 
-        /* Certificate Image Styling */
-        .certificate-image-container {
-            margin: 20px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid rgba(138, 154, 91, 0.1);
-            transition: var(--transition);
-        }
-
-        .certificate-image-container:hover {
-            transform: scale(1.01);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .certificate-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .certificate-images-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .certificate-images-grid-4 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .grid-image-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid rgba(138, 154, 91, 0.1);
-            transition: var(--transition);
-        }
-
-        .grid-image-container:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .grid-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
         /* Responsive Design */
         @media (max-width: 1200px) {
             .container {
@@ -1096,6 +1126,12 @@
                 padding: 0 20px;
             }
             
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                padding-bottom: 0.5rem;
+            }
+            
             .hero-text h1 {
                 font-size: 2rem;
             }
@@ -1122,12 +1158,9 @@
                 grid-template-columns: 1fr;
             }
             
-            h2 {
-                font-size: 1.8rem;
-            }
-            
             .section-subtitle {
                 font-size: 1rem;
+                margin: 0 auto 2rem;
             }
         }
 
@@ -1556,6 +1589,14 @@
                     <div class="certificate-details">
                         Participated in robotics competition demonstrating problem-solving and programming skills for subject CSST 105.
                     </div>
+                    
+                    <!-- PDF Button -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/robotics-certificate.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Robotics</span>
                         <span class="topic-tag">Programming</span>
@@ -1584,6 +1625,14 @@
                     <div class="certificate-details">
                         Learned to create interactive dashboards and data visualizations using advanced Excel features.
                     </div>
+                    
+                    <!-- PDF Button -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/interactive-dashboards-using-excel.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Excel</span>
                         <span class="topic-tag">Data Analytics</span>
@@ -1613,6 +1662,14 @@
                     <div class="certificate-details">
                         Training on application of Artificial Intelligence tools in modern cybersecurity practices and threat detection.
                     </div>
+                    
+                    <!-- PDF Button -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/usage-of-ai-tools-in-cyber-security.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Cyber Security</span>
                         <span class="topic-tag">Artificial Intelligence</span>
@@ -1642,6 +1699,14 @@
                     <div class="certificate-details">
                         Mastering professional email strategies and workplace communication etiquette for career success.
                     </div>
+                    
+                    <!-- PDF Button -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/mastering-email-etiquette-for-success.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Communication</span>
                         <span class="topic-tag">Professionalism</span>
@@ -1676,6 +1741,17 @@
                     <div class="certificate-details">
                         Achieved certifications in Word Processing and Spreadsheets demonstrating advanced office software proficiency.
                     </div>
+                    
+                    <!-- PDF Buttons -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/word-certificate.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> Word Certificate PDF
+                        </a>
+                        <a href="assets/certificates/spreadsheet-certificate.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> Spreadsheet Certificate PDF
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Microsoft Word</span>
                         <span class="topic-tag">Microsoft Excel</span>
@@ -1716,12 +1792,69 @@
                     <div class="certificate-details">
                         Comprehensive training covering cyber security, IoT, stress management, career opportunities, and employability skills.
                     </div>
+                    
+                    <!-- PDF Buttons -->
+                    <div class="pdf-buttons-container">
+                        <a href="assets/certificates/cyber-security.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> Cyber Security PDF
+                        </a>
+                        <a href="assets/certificates/iot-training.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> IoT Training PDF
+                        </a>
+                    </div>
+                    
                     <div class="certificate-topics">
                         <span class="topic-tag">Cyber Security</span>
                         <span class="topic-tag">IoT</span>
                         <span class="topic-tag">Career Development</span>
                         <span class="topic-tag">Soft Skills</span>
                         <span class="topic-tag">Stress Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional PDF Certificates Section -->
+            <div style="margin-top: 60px;">
+                <h3 class="fade-in" style="text-align: center; margin-bottom: 30px; color: var(--dark);">Additional Microsoft Certificates (PDF)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--muted-red); margin-bottom: 10px;">Microsoft 365 Copilot for Everyone</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Empowering your workforce with AI</p>
+                        <a href="assets/certificates/microsoft-365-copilot-for-everyone-empowering-your-workforce-with-ai.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--muted-red); margin-bottom: 10px;">Real-time Intelligence in Microsoft Fabric</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Getting started with real-time data analytics</p>
+                        <a href="assets/certificates/get-started-with-real-time-intelligence-in-microsoft-fabric.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--muted-red); margin-bottom: 10px;">Copilot in Microsoft Excel</h4>
+                        <p style="color: #666; margin-bottom: 15px;">AI-powered Excel automation</p>
+                        <a href="assets/certificates/copilot-in-microsoft-excel.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--muted-red); margin-bottom: 10px;">AI Agents in GitHub Copilot</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Getting started with AI agents</p>
+                        <a href="assets/certificates/getting-started-with-ai-agents-in-github-copilot.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--muted-red); margin-bottom: 10px;">App Development with Flutter</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Revolutionize app development with Flutter</p>
+                        <a href="assets/certificates/revolutionize-app-development-dive-into-flutter.pdf" target="_blank" class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF Certificate
+                        </a>
                     </div>
                 </div>
             </div>
