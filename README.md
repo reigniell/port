@@ -1,108 +1,139 @@
-![Reigniell Bayani](assets/headshot_circle.png)
+# 👩‍💻 Reigniell Ann L. Bayani - Computer Science Portfolio
 
-# Reigniell Bayani
-**Data Scientist** | Python · SQL · AWS · Snowflake · MATLAB
+![Portfolio Preview](assets/headshot_circle.png)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-blue?logo=github)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![Medium](https://img.shields.io/badge/Medium-Blog-black?logo=medium)](https://medium.com/@shawhin)
-[![YouTube](https://img.shields.io/badge/YouTube-Channel-red?logo=youtube)](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+**4th Year BS Computer Science | Intelligent Systems | Seeking OJT Opportunities**
 
----
+[![GitHub Pages](https://img.shields.io/badge/🌐-Live%20Portfolio-blue)](https://reigniell.github.io/port/)
+[![GitHub](https://img.shields.io/badge/💻-Source%20Code-black)](https://github.com/reigniell/port)
+[![Email](https://img.shields.io/badge/📧-Contact%20Me-red)](mailto:reigniellannbayani@gmail.com)
+[![Status](https://img.shields.io/badge/📋-Seeking%20OJT-green)](mailto:reigniellannbayani@gmail.com?subject=OJT%20Opportunity)
 
-## 👨‍💻 About Me
-Data Scientist with a Ph.D. in Physics and extensive experience in machine learning, data analysis, and building data pipelines. Passionate about extracting insights from complex datasets and developing data-driven solutions.
+## 🚀 About This Portfolio
 
-## 🛠️ Technical Skills
-- **Programming**: Python, SQL, MATLAB
-- **Cloud & Big Data**: AWS, Snowflake
-- **Machine Learning**: Scikit-learn, TensorFlow, Deep Learning
-- **Tools**: Git, Docker, Scrapy, Tableau
-- **Specialties**: Data Pipelines, Time Series Analysis, Signal Processing, EEG Analysis
+A fully responsive, custom-built portfolio website showcasing my skills, projects, and professional journey as a Computer Science student specializing in Intelligent Systems at Laguna State Polytechnic University.
 
----
+## 🎯 Features
 
-## 💼 Work Experience
+- **Modern & Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Professional Presentation**: Clean layout with subtle animations and transitions
+- **Project Showcase**: Display of technical projects with code samples
+- **Interactive Certificates**: Categorized certificates with modal previews
+- **Contact Integration**: Direct email links and social media connections
+- **Performance Optimized**: Fast loading with minimal dependencies
 
-### **Data Scientist** @ Toyota Financial Services
-*June 2022 - Present*
-- Uncovered and corrected missing step in production data pipeline impacting over 70% of active accounts
-- Redeveloped loan originations model resulting in **50% improvement in model performance** and **$1M+ in potential loss savings**
-- Implemented automated monitoring systems for real-time anomaly detection
+## 📊 Technical Stack
 
-### **Data Science Consultant** @ Shawhin Talebi Ventures LLC
-*December 2020 - Present*
-- Conducted data collection, processing, and analysis for novel study evaluating impact of 300+ biometric variables on human performance in hyper-realistic training scenarios
-- Applied unsupervised deep learning to longitudinal ICU data to discover novel sepsis sub-phenotypes
-- Developed predictive models for environmental conditions using biometric measurements
+### **Programming Languages**
+- **Python** (Proficient): Data analysis, web scraping, AI/ML
+- **Java** (Intermediate): Object-oriented programming, algorithms
+- **C++** (Intermediate): System programming, data structures
+- **HTML5/CSS3/JavaScript**: Frontend development, responsive design
 
----
+### **Tools & Technologies**
+- **Git/GitHub**: Version control, collaboration
+- **VS Code**: Primary development environment
+- **Microsoft Office Suite**: Advanced Excel, documentation
+- **Linux/Unix**: Command line proficiency
 
-## 🚀 Projects
+### **AI/ML Concepts**
+- Machine Learning Fundamentals
+- Neural Networks
+- Data Analysis & Visualization
+- Intelligent Systems Design
 
-### **Web Scraper with Scrapy**
-*Python, Scrapy, Data Extraction*
-- Built scalable web scraper for automated data collection
-- Implemented concurrent requests and rate limiting
-- Cleaned and structured data for analysis
-- Export capabilities to JSON/CSV formats
+## 🏆 Projects
 
-### **Data-Driven EEG Band Discovery with Decision Trees**
-[![Paper](https://img.shields.io/badge/📄-Publication-blue)](https://www.mdpi.com/1424-8220/22/8/3048)
-*Python, Signal Processing, Machine Learning*
-- Developed objective strategy for discovering optimal EEG bands based on signal power spectra
-- Data-driven approach identified bands that **outperformed traditional boundaries by 2x**
-- Provides automated, flexible method for capturing key signal components and discovering new brain activity indices
+### **1. Professional Portfolio Website**
+- **Technologies**: HTML5, CSS3, JavaScript, GitHub Pages
+- **Description**: Fully responsive portfolio built from scratch with custom animations and design
+- **Features**: Mobile-first design, smooth scrolling, project showcase, certificate gallery
+- **Live Demo**: [https://reigniell.github.io/port](https://reigniell.github.io/port)
 
-![EEG Band Discovery](assets/eeg_band_discovery.jpeg)
+### **2. Web Scraper with Scrapy**
+- **Technologies**: Python, Scrapy, BeautifulSoup, Pandas
+- **Description**: Scalable web scraper for automated data collection and processing
+- **Features**: Concurrent requests, data cleaning, JSON/CSV export, error handling
+- **GitHub**: [web-scraper-scrapy](https://github.com/reigniell/web-scraper-scrapy)
 
-### **Decoding Physical and Cognitive Impacts of Particulate Matter**
-[![Paper](https://img.shields.io/badge/📄-Publication-blue)](https://www.mdpi.com/1424-8220/22/11/4240)
-*MATLAB, Machine Learning, Environmental Data Science*
-- Trained 100+ ML models estimating particulate matter concentrations from 300+ biometric variables
-- Achieved **r² = 0.91** accuracy at ultra-fine spatial scales
-- Demonstrated that biometric measurements can accurately infer environmental conditions
+### **3. Intelligent Systems Project** (In Development)
+- **Technologies**: Python, TensorFlow, Machine Learning
+- **Description**: AI/ML applications as part of CS Intelligent Systems curriculum
+- **Status**: Currently in development
 
-![Bike Study](assets/bike_study.jpeg)
+## 📚 Education
 
----
+### **Laguna State Polytechnic University** (2022 – Present)
+- **Degree**: BS Computer Science major in Intelligent Systems
+- **Focus**: Artificial Intelligence, Machine Learning, Software Engineering
 
-## 📚 Publications
-1. **Talebi, S.**, et al. (2022). Data-Driven EEG Band Discovery with Decision Trees. *Sensors*
-2. **Talebi, S.**, et al. (2022). Decoding Physical and Cognitive Impacts of PM Concentrations at Ultra-fine Scales. *Sensors*
-3. Lary, D.J., **Wijeratne, L.O.**, et al. (2021). Autonomous Learning of New Environments with a Robotic Team. *Sensors*
-4. Wijeratne, L.O., **Talebi, S.**, et al. (2020). Using Machine Learning for Calibration of Airborne Particulate Sensors. *Sensors*
-5. **Talebi, S.**, et al. (2019). Modeling Autonomic Pupillary Responses from External Stimuli. *Biomedical Journal*
+### **LSPU Senior High School** (2020 – 2022)
+- **Strand**: Information and Communication Technology
+- **Achievement**: With Honors
 
-*See [Google Scholar](link) or [ResearchGate](link) for complete list*
+### **Liceo De Pila** (2016 – 2020)
+- **Achievement**: Best in Conduct
 
----
+## 🏅 Certifications & Training
 
-## 🎤 Talks & Lectures
-- **Causality: The new science of an old question** - GSP Seminar, 2021
-- **Dimensionality Reduction** - Big Data and Machine Learning for Scientific Discovery, 2021
-- **Fourier and Wavelet Transforms** - Scientific Computing, 2020
-- **A Brief Introduction to Optimization** - GSP Seminar, 2019
-- **A Brief Introduction to Networks** - GSP Seminar, 2019
+### **Technical Skills**
+- CCS Robotics Competition (LSPU, 2025)
+- AI Tools in Cyber Security (2024)
+- Office Productivity Suite (Saylor.org Academy, 2020-2021)
+- Professional Development Series (LSPU, 2022-2024)
 
----
+### **Microsoft Specializations**
+- Interactive Dashboards using Excel (2024)
+- Copilot in Microsoft Excel (2024)
+- Microsoft 365 Copilot for Everyone (2024)
 
-## 🎓 Education
-- **Ph.D., Physics** | The University of Texas at Dallas (2022)
-- **M.S., Physics** | The University of Texas at Dallas (2019)  
-- **B.S., Physics** | The University of Texas at Dallas (2017)
+### **Professional Development**
+- Mastering Email Etiquette (2024)
+- Cyber Security Fundamentals
+- IoT Concepts and Applications
+- Career Planning Strategies
 
----
+## 💼 Professional Experience
 
-## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=default)
+### **Creative Crafter** (Part-time, 2024 – Present)
+- Handmade craft design and creation
+- Inventory management and customer service
+- Product customization and quality control
 
----
+### **Makeup Artist** (Part-time, 2024 – Present)
+- Professional makeup application for events
+- Client consultation and style recommendation
+- Hygiene standards maintenance
 
-## 📫 Contact
-- **Email**: your.email@example.com
-- **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- **Blog**: [Medium/@shawhin](https://medium.com/@shawhin)
-- **YouTube**: [Data Science Channel](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+### **Pastry Assistant** (Part-time, 2020 – Present)
+- Pastry preparation and kitchen organization
+- Precision in food preparation
+- Team collaboration and attention to detail
 
-*Open to consulting opportunities and collaborations in data science and machine learning*
+## 🎯 Career Objective
+
+As a dedicated Computer Science student specializing in Intelligent Systems, I aim to secure an OJT position where I can contribute to software development projects, apply AI/ML concepts, and enhance my technical expertise. Eager to learn from industry professionals and work on innovative solutions in a collaborative environment.
+
+## 📱 Contact Information
+
+- **Email**: [reigniellannbayani@gmail.com](mailto:reigniellannbayani@gmail.com)
+- **Phone**: 0961-351-8289 | 0992-996-8579
+- **Location**: Victoria, Laguna, Philippines
+- **LinkedIn**: [linkedin.com/in/bayani-reigniell-ann-5a5b59395](www.linkedin.com/in/bayani-reigniell-ann-5a5b59395)
+- **GitHub**: [github.com/reigniell](https://github.com/reigniell)
+
+## 🔧 Installation & Local Development
+
+To run this portfolio locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/reigniell/port.git
+
+# Navigate to project directory
+cd port
+
+# Open index.html in your browser
+# Or use a local server
+python -m http.server 8000
+# Then visit: http://localhost:8000
