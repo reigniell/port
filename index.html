@@ -1584,19 +1584,43 @@
         </div>
     </section>
 
-    <!-- Career Objective -->
-  <section id="objective" style="position: relative; overflow: hidden;">
-    <!-- 1. Waterfall overlay sits by itself in the background -->
+<section id="objective" style="position: relative; overflow: hidden; padding: 5rem 1.5rem;">
+    <!-- 1. The background rain animation -->
     <div class="waterfall-overlay"></div>
 
-    <!-- 2. ONLY ONE objective card container for your text -->
-    <div class="objective">
-        <div class="objective-header">
-            <i class="fa-solid fa-bullseye"></i>
-            <h2>Career Objective</h2>
-        </div>
-        <p>
-            An ambitious and detail-oriented Computer Science student passionate about leveraging code to solve real-world problems...
+    <!-- 2. Clean, Minimalist Card Holder (No heavy green accent) -->
+    <div class="objective-card" style="
+        position: relative; 
+        z-index: 2; 
+        background: #ffffff; 
+        border-radius: 24px; /* Curved edges */
+        border: 1px solid rgba(0, 0, 0, 0.08); /* Minimalist, ultra-subtle border all around */
+        padding: 3.5rem 2.5rem; 
+        max-width: 800px; 
+        margin: 0 auto; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow to separate it from the busy background */
+        text-align: center; /* Centered layout for clean symmetry */
+    ">
+        <!-- Inside Card: Title -->
+        <h2 style="
+            font-size: 2.2rem; 
+            color: #2c3e50; 
+            margin: 0 0 1.5rem 0; 
+            font-family: inherit; 
+            font-weight: 700;
+        ">
+            Career Objective
+        </h2>
+
+        <!-- Inside Card: Your Sentence -->
+        <p style="
+            font-size: 1.15rem; 
+            line-height: 1.8; 
+            color: #555555; 
+            margin: 0; 
+            font-family: inherit;
+        ">
+            An ambitious and detail-oriented Computer Science student passionate about leveraging code to solve real-world problems, optimize systems, and continuously learn emerging technologies in software development.[cite: 1]
         </p>
     </div>
 </section>
