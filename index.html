@@ -584,14 +584,21 @@
             font-size: 1rem;
         }
 
-        /* Enhanced Projects */
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
+    display: grid;
+    /* This forces exactly 2 columns of equal width */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; /* Keeps a nice spacing between your cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Optional: Make it stack nicely on mobile screens */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
         .project-card {
             background: rgba(255, 255, 255, 0.65); /* Translucent background */
             backdrop-filter: blur(10px);           /* Glassmorphism blur effect */
